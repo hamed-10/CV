@@ -11,16 +11,7 @@ html {
     overflow-x: hidden;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-    animation: fadeIn 0.8s ease-out forwards;
-    perspective: 1000px;
-}
+
 
 /* Effet de parallaxe subtil */
 .parallax-bg {

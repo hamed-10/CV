@@ -273,10 +273,7 @@ h2 {
     flex: 1 1 300px; /* Allow images to wrap responsively */
 }
 
-.sec4{
-    display: flex;
 
-}
 
 
 .projets-grid li img{
@@ -302,6 +299,7 @@ h2 {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
 }
 
 .sec4 h2 {

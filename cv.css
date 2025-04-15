@@ -13,6 +13,9 @@ body {
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
+    animation: fadeInDown 0.5s ease-out;
+    animation: fadeInZoom 0.6s ease-out forwards;
+    
 }
 
 /* ===== HEADER STYLES ===== */
@@ -294,77 +297,109 @@ h2 {
     filter: brightness(1.05);
     animation: rotate 0.5s ease;
 }
+/* Style général de la section */
 .sec4 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    padding: 40px 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    max-width: 500px;
-}
-.sec4 p{
-    font-size: 15px;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.l1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    justify-content: left;
-    transform: translate(0%, -0%);
 }
 
-.l2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    justify-content: left;
-    transform: translate(-50%, -0%);
-}
-.l3{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    justify-content: left;
-    transform: translate(60%, -0%);
-}
-.l4{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    justify-content: left;
+.sec4 h2 {
+    text-align: center;
     margin-bottom: 40px;
-    transform: translate(-0%, -0%);
+    font-size: 2rem;
+    color: #333;
 }
 
+/* Conteneur des projets */
+.projets-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
-
-.sec4 li{
-    margin-bottom: 80px;
-    padding: 10px;
-    /*background-color: white;*/
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    font-size: 1.1rem;
-    justify-content: center;
+/* Style de chaque projet */
+.projet-item {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.projet-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Partie image */
+.projet-image {
+    flex: 1;
+    min-width: 300px;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.projet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.projet-item:hover .projet-image img {
+    transform: scale(1.05);
+}
+
+/* Partie texte */
+.projet-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projet-content i {
+    font-size: 1.8rem;
+    color: #8fd3e8;
+    margin-bottom: 15px;
+}
+
+.projet-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.projet-content p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Alternance image/texte */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projet-item, .reverse {
+        flex-direction: column;
+    }
+    
+    .projet-image {
+        max-height: 200px;
+        min-width: 100%;
+    }
+    
+    .projet-content {
+        padding: 20px;
+    }
+}
+
 
 /* ===== FOOTER ===== */
 footer {

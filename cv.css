@@ -688,28 +688,7 @@ footer {
         flex-direction: column;
     }
     
-    /* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 767px) {
-    .l1, .l2, .l3, .l4 {
-        flex-direction: column; /* Passage en colonne */
-        align-items: center;
-        text-align: center;
-        padding: 15px;
-        margin-bottom: 15px;
-        transform: translate(50% ,50%);
-    }
-    
-    .l1 p, .l2 p, .l3 p, .l4 p {
-        padding: 10px 0 0 0;
-        font-size: 0.9rem;
-    }
-    
-    /* Si vous avez des icônes à gauche */
-    .l1 i, .l2 i, .l3 i, .l4 i {
-        margin-bottom: 8px;
-        margin-right: 0;
-    }
-}
+ 
 
 /* ===== RESPONSIVE TABLETTE ===== */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -718,11 +697,7 @@ footer {
         align-items: center;
     }
     
-    .l1, .l2, .l3, .l4 {
-        width: 80%;
-        margin-bottom: 20px;
-        transform: translate(-50%, 0%);
-    }
+   
 }
 
 /* ===== GRANDS ÉCRANS ===== */
@@ -733,11 +708,7 @@ footer {
         justify-content: center;
     }
     
-    .l1, .l2, .l3, .l4 {
-        width: 45%;
-        margin: 10px;
-        transform: translate(40%, 50%);
-    }
+   
 }
 }
 

@@ -309,8 +309,9 @@ h2 {
 }
 
 .qualites-grid li, .competences-grid li {
-    background-color: white;
+    
     padding: 20px;
+    margin: 15px;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     text-align: center;
@@ -624,8 +625,10 @@ footer {
     
     /* Navigation optimisée */
     nav {
-        margin-top: 20px;
-        position: static; /* Supprime le fixed pour gagner de l'espace */
+        margin-top: 25px;
+        position: static;
+        position: fixed; /* Supprime le fixed pour gagner de l'espace */
+        z-index: 999;
     }
     
     .important {

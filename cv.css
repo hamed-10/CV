@@ -14,7 +14,7 @@ body {
 
 /* En-tête */
 .entete {
-    background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+    background: linear-gradient(135deg, rgb(182, 227, 212), #8fd3e8);
     color: white;
     padding: 1.5rem 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -46,7 +46,7 @@ nav {
 }
 
 .nav-link {
-    color: #555;
+    color: #141414;
     text-decoration: none;
     font-weight: 600;
     padding: 0.5rem 1rem;
@@ -55,7 +55,7 @@ nav {
 }
 
 .nav-link:hover {
-    color: #6e48aa;
+    color: #488eaa;
     background-color: #f0e6ff;
 }
 
@@ -88,7 +88,7 @@ nav {
 }
 
 .profil-text h2 {
-    color: #6e48aa;
+    color: #4889aa;
     margin-bottom: 1.5rem;
     font-size: 2rem;
 }
@@ -122,7 +122,7 @@ nav {
 h2 {
     text-align: center;
     margin-bottom: 3rem;
-    color: #6e48aa;
+    color: #488baa;
     font-size: 2.2rem;
     position: relative;
 }
@@ -132,45 +132,139 @@ h2::after {
     display: block;
     width: 80px;
     height: 4px;
-    background: linear-gradient(to right, #6e48aa, #9d50bb);
+    background: linear-gradient(135deg, rgb(182, 227, 212), #a48fe8);
     margin: 0.5rem auto 0;
     border-radius: 2px;
 }
-
-.qualites-grid, .competences-grid {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+/* Mise à jour de la section compétences */
+.competences-grid ul {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    
 }
 
-.qualites-grid ul, .competences-grid ul {
-    display: grid;
+.competences-grid li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.competences-grid li:hover {
+    transform: translateY(-5px);
+}
+
+.skill-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-name {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 600;
+}
+
+.skill-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.skill-bar {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(135deg, rgb(182, 227, 212), #a48fe8);
+    transition: width 1s ease-in-out;
+}
+
+/* Pourcentages spécifiques pour chaque compétence */
+.skill-html .skill-bar { width: 90%; }
+.skill-css .skill-bar { width: 85%; }
+.skill-js .skill-bar { width: 75%; }
+.skill-python .skill-bar { width: 80%; }
+.skill-cpp .skill-bar { width: 70%; }
+.skill-php .skill-bar { width: 65%; }
+.skill-design .skill-bar { width: 85%; }
+.skill-photoshop .skill-bar { width: 90%; }
+.skill-illustrator .skill-bar { width: 80%; }
+
+.qualites-grid {
+    padding: 2.5rem;
+    border-radius: 10px;
+    
+    
+}
+
+/* Mise à jour de la section qualités */
+.qualites-grid ul {
+    display: flex;
+    flex-direction: column;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     list-style: none;
 }
 
-.qualites-grid li, .competences-grid li {
+.qualites-grid li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.qualites-grid li:hover {
+    transform: translateY(-5px);
+    
+}
+
+.quality-container {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-size: 1.1rem;
-    padding: 0.8rem 1.2rem;
-    background-color: #f8f5ff;
-    border-radius: 6px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
-.qualites-grid li:hover, .competences-grid li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(110, 72, 170, 0.2);
-}
-
-.qualites-grid i, .competences-grid i {
+.quality-name {
+    font-weight: 600;
     color: #6e48aa;
-    font-size: 1.3rem;
 }
+
+.quality-level {
+    display: flex;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+.level-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+}
+
+.level-dot.filled {
+    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+}
+
+/* Niveaux spécifiques pour chaque qualité */
+.quality-creatif .level-dot:nth-child(-n+5) { background-color: #6e48aa; }
+.quality-organise .level-dot:nth-child(-n+6) { background-color: #6e48aa; }
+.quality-autonome .level-dot:nth-child(-n+4) { background-color: #6e48aa; }
+.quality-curieux .level-dot:nth-child(-n+5) { background-color: #6e48aa; }
+.quality-perseverant .level-dot:nth-child(-n+6) { background-color: #6e48aa; }
+.quality-rigoureux .level-dot:nth-child(-n+5) { background-color: #6e48aa; }
 
 .imgo {
     margin: 3rem 0;
@@ -234,12 +328,12 @@ h2::after {
 
 .projet-content i {
     font-size: 2.5rem;
-    color: #6e48aa;
+    color: #66b2e4;
     margin-bottom: 1rem;
 }
 
 .projet-content h3 {
-    color: #6e48aa;
+    color: #58a2d7;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -251,7 +345,7 @@ h2::after {
 
 /* Pied de page */
 footer {
-    background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+    background: linear-gradient(135deg, rgb(182, 227, 212), #8fd3e8);
     color: white;
     padding: 2.5rem 0;
     text-align: center;

@@ -497,7 +497,7 @@ textarea:valid {
 
 /* Pied de page */
 footer {
-    background: linear-gradient(135deg, rgb(182, 227, 212), #8fd3e8);
+    background: linear-gradient(135deg, rgb(182, 227, 212), #a48fe8);
     color: white;
     padding: 2.5rem 0;
     text-align: center;

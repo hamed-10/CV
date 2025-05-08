@@ -361,6 +361,7 @@ h2::after {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 70px;
 }
 
 
@@ -450,6 +451,7 @@ textarea:valid {
         width: calc(100% - 2rem); /* 100% moins les marges */
         max-width: 100%; /* S'assure qu'il ne dépasse pas */
         box-sizing: border-box; /* Inclut le padding dans la largeur */
+        margin-bottom: 50px;
     }
     
     #email h2 {
@@ -477,6 +479,7 @@ textarea:valid {
         padding: 1.2rem;
         margin: 0.5rem auto;
         width: calc(100% - 1rem);
+        margin-bottom: 50px;
     }
     
     .form-group input,

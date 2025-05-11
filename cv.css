@@ -14,7 +14,7 @@ body {
 
 /* En-tête */
 .entete {
-    background: linear-gradient(135deg, rgb(182, 227, 212), #8fd3e8);
+    background: linear-gradient(135deg, rgb(182, 227, 212), #a48fe8);
     color: white;
     padding: 1.5rem 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

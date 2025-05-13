@@ -216,6 +216,8 @@ h2::after {
     padding: 1.2rem;
     border-radius: 8px;
     transition: transform 0.3s ease;
+    background-color: #fff;
+
 }
 
 .qualites-grid li:hover {
@@ -501,6 +503,9 @@ footer {
     color: white;
     padding: 2.5rem 0;
     text-align: center;
+}
+footer a{
+    text-decoration: none;
 }
 
 .contenu_footer p {
